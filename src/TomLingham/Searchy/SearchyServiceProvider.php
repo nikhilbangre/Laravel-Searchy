@@ -19,7 +19,7 @@ class SearchyServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bindShared('searchy', function( $app )
+		$this->app->bind('searchy', function( $app )
 		{
 			return new SearchBuilder( $app['config'] );
 		});
